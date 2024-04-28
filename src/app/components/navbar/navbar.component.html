@@ -1,0 +1,13 @@
+<header class="header">
+  <a href="/bienvenida" class="logo">Sala de Juegos</a>
+  
+  <nav class="navbar">
+    @if (mostrarAutenticacion) {
+      <a routerLink="/login">Iniciar Sesión</a>
+      <a routerLink="/registro">Crear cuenta</a>
+    } @else {
+      <a (click)="cerrarSesion()" routerLink="/bienvenida">Cerrar Sesión</a>
+    }
+    <a routerLink="/quien-soy">Sobre mí</a>
+  </nav>
+</header>

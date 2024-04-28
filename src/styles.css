@@ -1,12 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
 body {
-  background-color: rgb(190, 188, 190);
-}
-#nav-bar {
   display: flex;
-  flex-direction: row;
-  align-items: center;
   justify-content: center;
-  background-color: rgb(72, 61, 139);
-  height: 100px;
+  align-items: center;
+  min-height: 100vh;
+  background: url("./assets/images/fondo5.jpg");
+  background-size: cover;
+  background-position: center;
 }
