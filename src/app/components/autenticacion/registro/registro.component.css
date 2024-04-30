@@ -1,5 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -55,10 +53,26 @@
   font-size: 20px;
 }
 
+#sexo {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, .7);
+  border-radius: 40px;
+  font-size: 16px;
+  padding: 0px 0px 0px 20px;
+}
+
+#sexo option {
+  background-color: #1a2544;
+  color: #fff;
+}
+
 .wrapper .remember-forgot {
-  display: flex;
+  display: felx;
   justify-content: space-between;
-  font-size: 15.5px;
+  font-size: 14.5px;
   margin: -15px 0 15px;
 }
 
@@ -86,7 +100,7 @@
   box-shadow: 0 0 10px rgba(0, 0, 0, .1);
   cursor: pointer;
   font-size: 16px;
-  color: #1a2544;
+  color: #333;
   font-weight: 600;
   transition: 0.2s;
 }
@@ -112,47 +126,6 @@
 
 .register-link p a:hover {
   text-decoration: underline;
-}
-
-.accesos {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  width: 420px;
-  background: transparent;
-  border: 2px solid rgba(255, 255, 255, .4);
-  backdrop-filter: blur(40px);
-  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-  color: #fff;
-  border-radius: 10px;
-  padding: 30px 40px;
-}
-.acceso-btn {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-}
-.acceso-btn img {
-  background: transparent;
-  padding: 8px;
-  width: 85px;
-  height: 85px;
-  border: 2px solid rgba(255, 255, 255, .4);
-  backdrop-filter: blur(40px);
-  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-  border-radius: 50%;
-}
-.imagenes {
-  margin-top: 15px;
-  display: flex;
-  justify-content: space-between;
-}
-
-img {
-  transition: 0.3s;
-}
-img:hover {
-  transform: scale(1.2);
 }
 
 .mensaje {

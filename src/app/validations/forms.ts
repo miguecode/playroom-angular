@@ -18,3 +18,12 @@ export function userValidator(value: string): boolean {
 
   return usernameRegex.test(value);
 }
+
+export function edadValidator(edad: number, minEdad: number, maxEdad: number): boolean {
+  return edad >= minEdad && edad <= maxEdad;
+}
+
+export function sexoValidator(sexo: string): boolean {
+  const sexosPermitidos = ['masculino', 'femenino', 'sin-especificar'];
+  return sexosPermitidos.includes(sexo.toLowerCase());
+}

@@ -1,103 +1,59 @@
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  user-select: none;
 }
 
-body {
-  padding: 0;
-  margin: 0;
+.texto {
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+  align-content: center;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .4);
+  backdrop-filter: blur(55px);
+  box-shadow: 10px  rgba(0, 0, 0, .2);
+  color: #fff;
+  border-radius: 10px;
+  padding: 30px 40px;
+  width: max-content;
 }
 
-#notfound {
-  position: relative;
-  height: 40vh;
+h1 {
+  font-size: 160px;
+  font-family: 'Montserrat';
+  margin-bottom: 0px;
 }
-
-#notfound .notfound {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-
-.notfound {
-  max-width: 520px;
-  width: 100%;
-  line-height: 1.4;
-  text-align: center;
-}
-
-.notfound .notfound-404 {
-  position: relative;
-  height: 240px;
-}
-
-.notfound .notfound-404 h1 {
-  font-family: 'Montserrat', sans-serif;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  font-size: 252px;
-  font-weight: 900;
-  margin-top: 15px;
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: -40px;
-  margin-left: -20px;
-}
-
-.notfound .notfound-404 h1>span {
-  text-shadow: -8px 0px 0px #4e4747;
-}
-
-.notfound .notfound-404 h3 {
-  font-family: 'Cabin', sans-serif;
-  position: relative;
-  font-size: 16px;
-  font-weight: 700;
-  text-transform: uppercase;
-  /* color: #262626; */
-  color: #ffffff;
-  margin: 0px;
-  letter-spacing: 3px;
-  padding-left: 6px;
-}
-
-.notfound h2 {
-  font-family: 'Cabin', sans-serif;
-  font-size: 20px;
-  font-weight: 400;
-  text-transform: uppercase;
-  /* color: #000; */
-  color: #ffffff;
+h2 {
   margin-top: 0px;
-  margin-bottom: 25px;
+  font-size: 55px;
+}
+p {
+  font-size: 22px;
 }
 
-@media only screen and (max-width: 767px) {
-  .notfound .notfound-404 {
-    height: 200px;
-  }
-  .notfound .notfound-404 h1 {
-    font-size: 200px;
-  }
+.botones {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-@media only screen and (max-width: 480px) {
-  .notfound .notfound-404 {
-    height: 162px;
-  }
-  .notfound .notfound-404 h1 {
-    font-size: 162px;
-    height: 150px;
-    line-height: 162px;
-  }
-  .notfound h2 {
-    font-size: 16px;
-  }
+button {
+  margin-top: 20px;
+  width: 40%;
+  height: 60px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 25px;
+  color: #1a2544;
+  font-weight: 600;
+  transition: 0.15s;
+}
+
+button:hover {
+  background-color:#1a2544;
+  color: #fff;
+  transform: scale(1.11);
 }

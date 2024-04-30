@@ -1,10 +1,15 @@
 <header class="header">
-  <a href="/bienvenida" class="logo">Sala de Juegos</a>
-  
+  @if (!isLoggedIn) {
+    <a href="/bienvenida" class="logo">Sala de Juegos</a>
+  } @else {
+    <a href="/home" class="logo">Sala de Juegos</a>
+  }
+
   <nav class="navbar">
-    @if (mostrarAutenticacion) {
-      <a routerLink="/login">Iniciar Sesión</a>
-      <a routerLink="/registro">Crear cuenta</a>
+    <button (click)="mostrar()">Mostrar si esta logeado o no</button>
+    @if (!isLoggedIn) {
+      <a routerLink="/autenticacion/login">Iniciar Sesión</a>
+      <a routerLink="/autenticacion/registro">Crear cuenta</a>
     } @else {
       <a (click)="cerrarSesion()" routerLink="/bienvenida">Cerrar Sesión</a>
     }

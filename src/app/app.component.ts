@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
 import { RouterModule, RouterOutlet } from '@angular/router';
-import { AuthService } from './services/auth.service'; 
 import { NavbarComponent } from './components/navbar/navbar.component';
 
 @Component({
@@ -12,9 +11,4 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 })
 export class AppComponent {
   title = 'playroom-angular';
-
-  /* Esto lo hago para probar si funciona el register
-  constructor(private authS: AuthService) {
-    this.authS.register('lolo@gmail.com', '111111');
-  }*/
 }

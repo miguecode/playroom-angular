@@ -2,12 +2,12 @@
 <div class="wrapper">
     <h1 style="user-select: none;">Iniciar Sesión</h1>
     <div class="input-box">
-      <input type="email" [(ngModel)]="correo" placeholder="Correo" ngModel email required>
+      <input type="email" [(ngModel)]="usuarioCreado.correo" placeholder="Correo" ngModel email required>
       <i class='bx bxs-envelope'></i>
     </div>
 
     <div class="input-box">
-      <input type="password" [(ngModel)]="clave" placeholder="Contraseña" required>
+      <input type="password" [(ngModel)]="usuarioCreado.clave" placeholder="Contraseña" required>
       <i class='bx bxs-lock-alt'></i>
     </div>
 
@@ -15,7 +15,7 @@
     <p class="mensaje" [ngClass]="{'error': error}" id="mensaje"> {{mensaje}} </p>
 
     <div class="register-link">
-      <p>¿No tenes una cuenta? <a routerLink="/registro">Registrate</a></p>
+      <p>¿No tenes una cuenta? <a routerLink="/autenticacion/registro">Registrate</a></p>
     </div>
 </div>
 
@@ -25,8 +25,8 @@
     <h3>Accesos Rápidos</h3>
   </div>
   <div class="imagenes">
-    <button (click)="autocompletarDatos('lolo@gmail.com', '111111')" class="acceso-btn"><img src="../../../assets/images/user-blanco.png"></button>
+    <button (click)="autocompletarDatos('junmigue7@gmail.com', 'bocaboca12')" class="acceso-btn"><img src="../../../assets/images/user-blanco.png"></button>
     <button (click)="autocompletarDatos('pepe@gmail.com', '111111')" class="acceso-btn"><img src="../../../assets/images/user-blanco.png"></button>
-    <button (click)="autocompletarDatos('luisillo@gmail.com', '111111')" class="acceso-btn"><img src="../../../assets/images/user-blanco.png"></button>
+    <button (click)="autocompletarDatos('RomiGimenez15@gmail.com', '111111')" class="acceso-btn"><img src="../../../assets/images/user-blanco.png"></button>
   </div>
 </div>
