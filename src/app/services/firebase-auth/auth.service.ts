@@ -2,6 +2,8 @@ import { Injectable } from '@angular/core';
 import { Auth, Persistence, UserCredential, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut } from '@angular/fire/auth';
 import 'firebase/auth';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { FirestoreUsuariosService } from '../firebase-firestore/firestore-usuarios.service';
+import { Usuario } from '../../classes/usuario';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +14,7 @@ export class AuthService {
   user$!: Observable<boolean>;
   private userSubject!: BehaviorSubject<boolean>;
 
-  constructor(private firebaseAuth: Auth) {
+  constructor(private firebaseAuth: Auth, private usuariosService: FirestoreUsuariosService) {
     console.log("Constructor - User:", this.firebaseAuth.currentUser);
     this.userSubject = new BehaviorSubject<boolean>(false);
     this.user$ = this.userSubject.asObservable();

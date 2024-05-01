@@ -6,14 +6,15 @@ import { addDoc } from 'firebase/firestore';
 @Injectable({
   providedIn: 'root'
 })
+
 export class FirestoreUsuariosService {
   private PATH = 'usuarios';
-  listaUsuarios: Usuario[] = [];
-
+  private listaUsuarios: Usuario[] = [];
+  
   constructor(private firestore: Firestore) {
-    this.cargar();
-    console.log(`La lista de usuarios hecha en el constructor: ${this.listaUsuarios}`);
-
+    const storedUsuarios = localStorage.getItem('usuarios');
+    storedUsuarios? this.listaUsuarios = JSON.parse(storedUsuarios) : this.cargar();
+    // Intento cargar la lista de usuarios con el LS y sino hay, lo hago desde la DB
   }
 
   guardar(usuario: Usuario) {
@@ -25,17 +26,15 @@ export class FirestoreUsuariosService {
         edad: usuario.edad,
         sexo: usuario.sexo
       });
-
-      this.cargar(); // Actualizo la lista apenas guardo un usuario nuevo
-
-      console.log(`La lista de usuarios después de guardar este ultimo: ${this.listaUsuarios}`);
+      
+      this.cargar();
     } catch(error) {
       console.log(error);
     }
   }
 
   getUsuarioPorCorreo(correo: string): Usuario | undefined {
-    return this.listaUsuarios.find(usuario => usuario.correo === correo);
+    return this.listaUsuarios.find(usuario => usuario.correo.toLocaleLowerCase() === correo.toLocaleLowerCase());
   }
 
   cargar() {
@@ -44,12 +43,15 @@ export class FirestoreUsuariosService {
   
     observable.subscribe((documentos => {
       this.listaUsuarios = documentos.map(doc => this.convertirAUsuario(doc));
+
+      // Guardo la lista de usuarios en el Local Storage
+      localStorage.setItem('usuarios', JSON.stringify(this.listaUsuarios));
     }));
   }
-  
-  convertirAUsuario(doc: any): Usuario {
+
+  private convertirAUsuario(doc: any): Usuario {
     const data = doc as any; // Acceder directamente a los datos del documento
-    // Aquí deberías validar que los datos del documento sean válidos antes de asignarlos a un objeto Usuario
+
     return new Usuario(
       data.correo,
       '', // La clave no la guardo en la BD
@@ -58,13 +60,4 @@ export class FirestoreUsuariosService {
       data.edad
     );
   }
-
-    /*
-  traer() {
-    const col = collection(this.firestore, this.PATH);
-    const observable = collectionData(col);
-
-    observable.subscribe((respuesta => {
-      console.log((respuesta));
-    }));*/
 }

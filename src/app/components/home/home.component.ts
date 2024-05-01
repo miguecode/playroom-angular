@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { AuthService } from '../../services/firebase-auth/auth.service';
+import { FirestoreUsuariosService } from '../../services/firebase-firestore/firestore-usuarios.service';
+import { Usuario } from '../../classes/usuario';
 
 @Component({
   selector: 'app-home',
@@ -9,15 +11,24 @@ import { AuthService } from '../../services/firebase-auth/auth.service';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
-export class HomeComponent implements OnInit{
-  isLoggedIn!: boolean;
 
-  constructor(private authService: AuthService) { }
+export class HomeComponent implements OnInit {
+  isLoggedIn = false;
+  usuarioActual: any;
 
-  ngOnInit(): void{
-    this.authService.user$.subscribe(isLoggedIn => {
-      this.isLoggedIn = isLoggedIn;
+  constructor(private authService: AuthService, private usuariosService: FirestoreUsuariosService) { }
+
+  async ngOnInit(): Promise<void> {
+    this.authService.user$.subscribe(async isLoggedIn => {
+      this.isLoggedIn = isLoggedIn; // Actualizo el valor de 'está Logeado'
+
+      if (isLoggedIn) { // Si está logeado, pido su correo y así obtengo todos sus datos
+        const correo = this.authService.getCurrentUserEmail();
+        this.usuarioActual = this.usuariosService.getUsuarioPorCorreo(correo!);
+
+        console.log('Estamos dentro del HOME y los datos del usuario actual son:');
+        console.log(this.usuarioActual);
+      }
     });
   }
-
 }

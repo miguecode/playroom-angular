@@ -31,7 +31,7 @@ export class LoginComponent {
         await this.authService.login(this.usuarioCreado.correo, this.usuarioCreado.clave);
         console.log('Inicio de sesión exitoso');
         
-        const usuarioDeLista = this.usuarioService.getUsuarioPorCorreo(this.usuarioCreado.correo);
+        const usuarioDeLista = await this.usuarioService.getUsuarioPorCorreo(this.usuarioCreado.correo);
         console.log('Datos del Usuario Recibido:');
         console.log(usuarioDeLista);
 

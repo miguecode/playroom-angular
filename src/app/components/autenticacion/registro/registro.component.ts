@@ -37,7 +37,11 @@ export class RegistroComponent {
         this.logsService.crear(this.usuarioCreado.nombreUsuario);
         
         this.vaciarCampos();
-        this.router.navigate(['/home']);
+        
+        setTimeout(() => {
+          this.router.navigate(['/home']);
+        }, 250);
+        
       } catch (error: any) {
         this.error = true;
         if (error && error.code) { // Verifico que error no sea nulo y que contiene a 'code'
