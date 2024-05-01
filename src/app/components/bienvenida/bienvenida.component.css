@@ -27,6 +27,12 @@ h2 {
 p {
   font-size: 22px;
 }
+h3 {
+  background-color: #1a2544;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 10px;
+}
 
 .botones {
   display: flex;
