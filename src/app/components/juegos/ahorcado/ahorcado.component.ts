@@ -43,13 +43,13 @@ export class AhorcadoComponent implements AfterViewInit {
 
   // Función que ejecuta todas las acciones del juego, inicia al pulsar el botón Jugar o Reiniciar
   iniciarJuego() {
-    this.juegoIniciado = true;
-    // Si ya le dio a 'Jugar', activo la bandera para habilitar los botones-tecla
-
-    if (this.botonJugar.textContent === 'OTRA PALABRA') {
+    if (this.juegoIniciado) {
       this.reiniciarJuego();
     }
-    // Si el botón ya no dice 'Jugar' y dice 'Otra Palabra', reinicio el juego y la pantalla
+    // Si el juego ya se inició previamente, reinicio todo antes de continuar
+    
+    this.juegoIniciado = true;
+    // Si ya le dio a 'Jugar' por primera vez, activo la bandera
 
     this.botonJugar.textContent = 'OTRA PALABRA';
     this.cantidadErrores = 0;
@@ -156,7 +156,7 @@ export class AhorcadoComponent implements AfterViewInit {
     for( let i = 0; i < this.botonesLetras.length ; i++ ) {
       this.botonesLetras[i].disabled = true;
     }
-    // Cambio el botón del texto a 'JUGAR', y deshabilito a todos los botones-tecla
+    // Cambio el botón del texto a 'OTRA PALABRA', y deshabilito a todos los botones-tecla
   }
 
   // Función que se ejecuta al reiniciar el juego
