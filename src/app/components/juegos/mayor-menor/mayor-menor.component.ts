@@ -17,8 +17,18 @@ export class MayorMenorComponent implements AfterViewInit {
   imagen: HTMLImageElement | null = this.id('imagen') as HTMLImageElement;
   botonMayor: any = document.getElementById('boton-mayor');
   botonMenor: any = document.getElementById('boton-menor');
+  cartas: HTMLImageElement[] = [];
 
   constructor(private elementRef: ElementRef) { }
+
+  ngOnInit(): void {
+    // Cargo todas las imagenes de cartas al iniciar el juego, para que no tarden en cargar después
+    for (let i = 1; i <= 12; i++) {
+      const imagen = new Image();
+      imagen.src = `../../../../assets/images/juegos/mayor-menor/cartas/carta${i}.png`;
+      this.cartas.push(imagen);
+    }
+  }
 
   ngAfterViewInit() {
     // Inicializo elementos del DOM después de que Angular haya inicializado la vista
