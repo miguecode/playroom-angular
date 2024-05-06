@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { RouterModule } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 import { AuthService } from '../../services/firebase-auth/auth.service';
 import { FirestoreUsuariosService } from '../../services/firebase-firestore/firestore-usuarios.service';
 import { Usuario } from '../../classes/usuario';
@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   isLoggedIn = false;
   usuarioActual: any;
 
-  constructor(private authService: AuthService, private usuariosService: FirestoreUsuariosService) { }
+  constructor(private authService: AuthService, private usuariosService: FirestoreUsuariosService, private router: Router) { }
 
   async ngOnInit(): Promise<void> {
     this.authService.user$.subscribe(async isLoggedIn => {

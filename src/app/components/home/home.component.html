@@ -1,15 +1,25 @@
-<div class="texto">
   @if (!isLoggedIn) {
-    <!-- <h1>Mmm...</h1>
-    <h2>¿Qué haces acá? 🤔​​</h2> <br>
-    <p>Lo sentimos, si querés acceder a la Sala de Juegos, primero tenes <br>
-      que iniciar sesión con tu usuario o en su defecto, registrarte.</p>
-    <div class="botones">
-      <button routerLink='/bienvenida'>Volver a Inicio</button>
+    <!-- <div class="texto">
+      <h1>Mmm...</h1>
+      <h2>¿Qué haces acá? 🤔​​</h2> <br>
+      <p>Lo sentimos, si querés acceder a la Sala de Juegos, primero tenes <br>
+        que iniciar sesión con tu usuario o en su defecto, registrarte.</p>
+      <div class="botones">
+        <button routerLink='/bienvenida'>Volver a Inicio</button>
+      </div> 
     </div> -->
   } @else {
-    <h1>Sala de Juegos</h1>
+    <div class="contenedor">
+      <div class="contenedor-juegos">
+        <button class="botonJuego" routerLink='/juegos/ahorcado'>Ahorcado</button>
+        <button class="botonJuego" routerLink="/juegos/mayor-menor">Mayor o Menor</button>
+        <button class="botonJuego">Juego 3</button>
+        <button class="botonJuego">Juego 4</button>
+      </div>
+      <!-- <button class="botonGrande">JUEGOS</button> -->
+      <button class="botonGrande">ESTADÍSTICAS</button>
+    </div>
+    <!-- <h1>Sala de Juegos</h1>
     <h2>¡Iniciaste sesión correctamente!​</h2> <br>
-    <p>Si estas leyendo esto, significa que ingresaste correctamente con tu usuario.</p>
+    <p>Si estas leyendo esto, significa que ingresaste correctamente con tu usuario.</p> -->
   }
-</div>

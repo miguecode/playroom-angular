@@ -1,0 +1,128 @@
+.contenedor-juego {
+  background: url('../../../../assets/images/juegos/mayor-menor/fondo.jpg');
+  background-size: cover;
+  border: solid 10px black;
+  border-radius: 40px;
+  width: 130vh; /* El contenedor ocupa el 95% del ancho del body */
+  height: 80vh; /* El contenedor ocupa el 95% de la altura visible del viewport */
+  margin: 2.5% auto; /* Márgenes superior e inferior del 2.5% y automático a los lados para centrar */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* Sitúa el contenido en la parte inferior */
+  align-items: center; 
+}
+
+.contenedor-arriba {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  margin-bottom: 20px;
+  gap: 200px;
+  /* justify-content: space-between; */
+}
+
+.contenedor-imagen img {
+  width: 100%; /* Ancho de la imagen al 100% del contenedor */
+  height: auto; /* Altura automática según la proporción de la imagen */
+  display: block; /* Para evitar espacios adicionales debajo de la imagen */
+}
+
+.animacion-salida {
+  animation: salida 0.5s ease-in-out; /* Duración y tipo de animación */
+}
+
+@keyframes salida {
+  0% {
+    opacity: 1; /* Estado inicial de la animación */
+  }
+  100% {
+    opacity: 0; /* Estado final de la animación */
+  }
+}
+
+.animacion-entrada {
+  animation: entrada 0.5s ease-in-out; /* Duración y tipo de animación */
+}
+
+@keyframes entrada {
+  0% {
+    opacity: 0; /* Estado inicial de la animación */
+  }
+  100% {
+    opacity: 1; /* Estado final de la animación */
+  }
+}
+
+#img-mazo {
+  border-radius: 10px;
+  width: 17%;
+  border-radius: 10px;
+  margin-right: 30px;
+  margin-bottom: 60px;
+  padding: 10px;
+  margin-left: 50px;
+}
+
+#img-carta-actual {
+  border-radius: 10px;
+  width: 17%;
+  border-radius: 10px;
+  margin-right: 30px;
+  margin-bottom: 60px;
+  padding: 10px;
+  margin-left: 20px;
+}
+
+.opciones {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.boton-opcion {
+  cursor: pointer;
+  background: #000000;
+  border: 1px solid #000000;
+  color: #fff;
+  border-radius: 7px;
+  font-size: 25px;
+  font-weight: bold;
+  transition: 0.15s;
+  width: 175px;
+  height: 100px;
+  margin-bottom: 18px;
+  margin-top: 20px;
+}
+
+.boton-opcion:hover {
+  background-color: #fff;
+  color: #000000;
+  border: #fff;
+  background: #fff;
+}
+
+#mensaje {
+  background-color: rgba(0, 0, 0, 0.747);
+  border-radius: 10px;
+  font-size: 35px;
+  color: #fff;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.contenedor-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#puntuacion {
+  background-color: rgba(0, 0, 0, 0.747);
+  border-radius: 10px;
+  font-size: 35px;
+  color: #fff;
+  font-weight: bold;
+  padding: 10px;
+}

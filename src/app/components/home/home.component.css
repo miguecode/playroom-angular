@@ -2,22 +2,6 @@
   user-select: none;
 }
 
-.texto {
-  justify-content: center;
-  align-items: center;
-  justify-items: center;
-  align-content: center;
-  background: transparent;
-  border: 2px solid rgba(255, 255, 255, .4);
-  backdrop-filter: blur(55px);
-  box-shadow: 10px  rgba(0, 0, 0, .2);
-  color: #fff;
-  border-radius: 10px;
-  padding: 30px 40px;
-  width: max-content;
-  margin-top: 60px;
-}
-
 h1 {
   font-size: 110px;
 }
@@ -28,29 +12,64 @@ p {
   font-size: 22px;
 }
 
-.botones {
+.contenedor {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  /* gap: 20px; */
+  /* Borde de Contenedor */
+  /* background: transparent;
+  border: 2px solid rgba(255, 255, 255, .4);
+  backdrop-filter: blur(40px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+  border-radius: 10px;
+  padding: 50px 300px 50px 300px; */
 }
 
-button {
-  margin-top: 20px;
-  width: 40%;
-  height: 60px;
-  background: #fff;
-  border: none;
-  outline: none;
-  border-radius: 40px;
+.contenedor-juegos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 50px;
+  border: 2px solid rgba(255, 255, 255, .4);
+  border-radius: 10px;
+  padding: 50px 300px 50px 300px;
+
+}
+
+.botonJuego {
   cursor: pointer;
-  font-size: 25px;
+  background: #fff;
+  border: 2px solid black;
   color: #1a2544;
-  font-weight: 600;
+  border-radius: 7px;
+  /* padding: 50px; */
+  font-size: 35px;
+  font-weight: bold;
   transition: 0.15s;
+  width: 250px;
+  height: 150px;
+}
+
+.botonGrande {
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .4);
+  backdrop-filter: blur(40px);
+  box-shadow: 10px  rgba(0, 0, 0, .2);
+  color: #fff;
+  padding: 50px;
+  border-radius: 40px;
+  font-size: 60px;
+  transition: 0.15s;
+  width: 780px;
+  margin-top: 10%;
 }
 
 button:hover {
+  border: none;
   background-color:#1a2544;
   color: #fff;
   transform: scale(1.11);
