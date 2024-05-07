@@ -11,14 +11,21 @@
   } @else {
     <div class="contenedor">
       <div class="contenedor-juegos">
-        <button class="botonJuego" routerLink='/juegos/ahorcado'>Ahorcado</button>
-        <button class="botonJuego" routerLink="/juegos/mayor-menor">Mayor o Menor</button>
-        <button class="botonJuego">Juego 3</button>
-        <button class="botonJuego">Juego 4</button>
+        <div id="linea">
+          <button class="botonJuego" routerLink='/juegos/ahorcado'>Ahorcado</button>
+          <button class="botonJuego" routerLink="/juegos/mayor-menor">Mayor o Menor</button>
+        </div>
+        <div id="linea">
+          <button class="botonJuego">Juego 3</button>
+          <button class="botonJuego">Juego 4</button>
+        </div>
+      </div>
+      <div class="contenedor-chat">
+        <app-chat></app-chat>
       </div>
       <!-- <button class="botonGrande">JUEGOS</button> -->
-      <button class="botonGrande">ESTADÍSTICAS</button>
     </div>
+    <button class="botonGrande">ESTADÍSTICAS</button>
     <!-- <h1>Sala de Juegos</h1>
     <h2>¡Iniciaste sesión correctamente!​</h2> <br>
     <p>Si estas leyendo esto, significa que ingresaste correctamente con tu usuario.</p> -->

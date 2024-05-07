@@ -1,0 +1,16 @@
+<div class="contenedor-chat" id="contenedorChat">
+  <div class="cuerpo-chat" #cuerpoChat id="cuerpoChat">
+    @for (mensaje of mensajes; track mensaje)
+    {
+      <p>
+        <span id="fecha">{{ mensaje.fechaFormateada }} </span>
+        <span id="remitente">{{ mensaje.remitente }}: </span>
+        <span id="contenido">{{ mensaje.contenido }}</span>
+      </p>
+    }
+  </div>
+  <div class="input-mensaje">
+    <input type="text" name="mensaje" id="input" [(ngModel)]="mensajeNuevo" autocomplete="off" (keydown.enter)="enviarMensaje()">
+    <button (click)="enviarMensaje()">Enviar</button>
+  </div>
+</div>

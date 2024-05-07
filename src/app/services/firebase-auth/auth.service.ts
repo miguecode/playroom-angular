@@ -3,7 +3,6 @@ import { Auth, Persistence, UserCredential, createUserWithEmailAndPassword, sign
 import 'firebase/auth';
 import { BehaviorSubject, Observable } from 'rxjs';
 import { FirestoreUsuariosService } from '../firebase-firestore/firestore-usuarios.service';
-import { Usuario } from '../../classes/usuario';
 
 @Injectable({
   providedIn: 'root'

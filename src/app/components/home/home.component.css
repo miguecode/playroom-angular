@@ -1,7 +1,3 @@
-* {
-  user-select: none;
-}
-
 h1 {
   font-size: 110px;
 }
@@ -16,27 +12,31 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  /* gap: 20px; */
-  /* Borde de Contenedor */
-  /* background: transparent;
-  border: 2px solid rgba(255, 255, 255, .4);
-  backdrop-filter: blur(40px);
-  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
-  border-radius: 10px;
-  padding: 50px 300px 50px 300px; */
+  flex-direction: row;
+  margin-top: 5%;
+  gap: 8%;
+  margin-left: 10%;  
 }
 
 .contenedor-juegos {
+  background-color: rgba(0, 0, 0, 0.747);
+  border: solid 5px rgb(0, 0, 0);
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  gap: 50px;
-  border: 2px solid rgba(255, 255, 255, .4);
+  flex-wrap: wrap;
+  width: 40%;
+  gap: 20px;
   border-radius: 10px;
-  padding: 50px 300px 50px 300px;
+  padding: 20px;
+}
 
+#linea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
 }
 
 .botonJuego {
@@ -60,12 +60,12 @@ p {
   backdrop-filter: blur(40px);
   box-shadow: 10px  rgba(0, 0, 0, .2);
   color: #fff;
-  padding: 50px;
-  border-radius: 40px;
-  font-size: 60px;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 40px;
   transition: 0.15s;
-  width: 780px;
-  margin-top: 10%;
+  /* width: 780px; */
+  margin-top: 5%;
 }
 
 button:hover {
@@ -73,4 +73,9 @@ button:hover {
   background-color:#1a2544;
   color: #fff;
   transform: scale(1.11);
+}
+
+.contenedor-chat {
+  width: 50%;
+  max-width: 50%;
 }

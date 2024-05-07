@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Usuario } from '../../classes/usuario';
-import { Firestore, collection, collectionData } from '@angular/fire/firestore';
+import { Firestore, collection } from '@angular/fire/firestore';
 import { Timestamp, addDoc } from 'firebase/firestore';
 
 @Injectable({

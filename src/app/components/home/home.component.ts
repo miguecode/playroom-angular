@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { AuthService } from '../../services/firebase-auth/auth.service';
 import { FirestoreUsuariosService } from '../../services/firebase-firestore/firestore-usuarios.service';
-import { Usuario } from '../../classes/usuario';
+import { ChatComponent } from '../chat/chat.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, ChatComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
