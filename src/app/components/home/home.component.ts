@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit {
   isLoggedIn = false;
   usuarioActual: any;
 
-  constructor(private authService: AuthService, private usuariosService: FirestoreUsuariosService, private router: Router) { }
+  constructor(private authService: AuthService, private usuariosService: FirestoreUsuariosService) { }
 
   async ngOnInit(): Promise<void> {
     this.authService.user$.subscribe(async isLoggedIn => {

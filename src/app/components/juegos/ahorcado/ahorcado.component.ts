@@ -1,9 +1,10 @@
 import { AfterViewInit, Component, ElementRef } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-ahorcado',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './ahorcado.component.html',
   styleUrl: './ahorcado.component.css'
 })
@@ -146,7 +147,8 @@ export class AhorcadoComponent implements AfterViewInit {
   // Función que se ejecuta al finalizar el juego
   private finalizarJuego(jugadorGano: boolean) {
     if (jugadorGano) {
-      this.id('resultado')!.innerHTML = 'GANASTEEEEE!!';
+      let puntuacion = 100 - (this.cantidadErrores * 10) + (this.cantidadAciertos * 5);
+      this.id('resultado')!.innerHTML = 'GANASTEEEEE!! Puntuación: ' + puntuacion;
     } else {
       this.id('resultado')!.innerHTML = 'AHORCADO! La palabra era: ' + this.palabra;
     }

@@ -9,4 +9,8 @@ export const routes: Routes = [
   path: 'mayor-menor',
  loadComponent: () => import('./mayor-menor/mayor-menor.component').then(m => m.MayorMenorComponent)
 },
+{
+  path: 'preguntados',
+ loadComponent: () => import('./preguntados/preguntados.component').then(m => m.PreguntadosComponent)
+},
 ];

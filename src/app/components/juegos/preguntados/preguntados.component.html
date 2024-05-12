@@ -1,0 +1,48 @@
+<br>
+<br>
+<br>
+
+<div class="contenedor">
+  <button routerLink='/home' id="atras">
+    Volver
+  </button>
+
+  <div class="contenedor-juego">
+    @if (!juegoIniciado) {
+        <br><br><br>
+        <h1>Preguntados</h1>
+        <p>Bienvenido a Preguntados. El desafío es llegar a contestar 10 preguntas,
+          tenés 3 vidas. El tiempo influirá en la puntuación final.
+        </p>
+        <button class="botonJugar" (click)="jugar()">Jugar</button>
+    } @else {
+      @if (cargando) {
+        <br><br><br><br><br><br><br>
+        <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
+        <p style="font-size: 45px;">Cargando preguntas...</p>
+      } @else {
+        <div class="contenedor-titulo">
+          <p>Pregunta {{ numeroDePreguntaActual }}/10</p>
+          <p>Vidas: {{ vidasRestantes }}</p>
+        </div>
+
+        <p class="parrafoPregunta" [innerHTML]="preguntaActual?.texto"></p>
+        <!-- Uso innerHTML en vez de {{}} para que funcionen los caracteres especiales -->
+
+        <p id="parrafoMensaje">{{ mensaje }}</p>
+
+        @for (opcion of opcionesActuales; track opcion) { 
+          <button class="botonOpcion" (click)="seleccionarRespuesta(opcion)" [innerHTML]="opcion"></button> 
+        } 
+        <br>
+        @if (yaRespondio && !botonJugarOtraVez) {
+          <button class="botonSiguiente" (click)="siguientePregunta()">Siguiente</button>
+        } @else {
+          @if (botonJugarOtraVez) {
+            <button class="botonJugar" (click)="jugar()">Jugar otra vez</button>
+          }
+        }
+      }
+    }
+  </div>
+</div>

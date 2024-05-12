@@ -1,9 +1,10 @@
 import { AfterViewInit, Component, ElementRef } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-mayor-menor',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './mayor-menor.component.html',
   styleUrl: './mayor-menor.component.css'
 })

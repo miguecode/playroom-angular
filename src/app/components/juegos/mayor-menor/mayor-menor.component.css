@@ -1,5 +1,35 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+#atras {
+  background: #fff;
+  border: none;
+  border-radius: 15%;
+  width: 120px;
+  height: 100px;
+  padding: 10px;
+  transition: 0.25s;
+  color: #000;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 45%;
+}
+#atras:hover {
+  background-color: #000;
+  color: #fff;
+}
+
 .contenedor-juego {
-  background: url('../../../../assets/images/juegos/mayor-menor/fondo.jpg');
+  background: url('../../../../assets/images/juegos/mayor-menor/fondoNegro.jpg');
   background-size: cover;
   border: solid 10px black;
   border-radius: 40px;
