@@ -17,18 +17,21 @@ export class PreguntadosComponent {
   opcionesActuales: string[] = [];
   respuestaCorrecta: string = '';
   yaRespondio: boolean = false;
-  // cantidadAciertos: number = 0;
   vidasRestantes: number = 3;
   numeroDePreguntaActual: number = 1;
   preguntas: Pregunta[] = [];
   cargando: boolean = false;
   mensaje: string = '';
+  intervaloTiempo: any = null;
+  duracionPartida: number = 0;
 
   //private preguntasService = inject(APIPreguntasService);
   // Esta es otra forma de manipular el servicio, pero en este caso lo voy a hacer en el constructor
 
   constructor(private apiService: APIPreguntasService) { }
 
+
+  // Función que inicia el juego, se ejecuta cuando el usuario le da a 'Jugar' o a 'Jugar otra vez'
   jugar() {
     if (this.botonJugarOtraVez) {
       this.reiniciarJuego();
@@ -45,6 +48,9 @@ export class PreguntadosComponent {
     this.cargarListaDePreguntas();
     // Cargo el array de preguntas consumiendo la API
 
+    this.iniciarContadorTiempo();
+    // Inicio el contador de tiempo de la partida, para saber al final cuanto duró
+
     setTimeout(() => {
       this.cargando = false;
       // Ya no se está cargando, por lo tanto dejo de mostrar el Loader
@@ -54,8 +60,6 @@ export class PreguntadosComponent {
   
       this.opcionesActuales = this.mezclarOpciones(this.preguntaActual.opciones);
       // Al array de opciones actuales, le asigno el array de opciones de la pregunta actual
-
-      
     }, 3500);
     // Estas funciones las tuve que meter en un setTimeOut para esperar un poco antes de su ejecución
     // Esto fue así ya que el servicio tarda un poco en traer la data. Entonces tenemos que darle ese tiempo
@@ -66,11 +70,14 @@ export class PreguntadosComponent {
   reiniciarJuego() {
     this.limpiarPantalla();
     this.vidasRestantes = 3;
-    // this.cantidadAciertos = 0;
     this.numeroDePreguntaActual = 1;
     this.botonJugarOtraVez = false;
+    this.duracionPartida = 0;
   }
 
+
+  // Función que se conecta al servicio encargado de consumir la API de preguntas
+  // Recibe un array desde la API, y lo transforma en un array de elementos tipo 'Pregunta'
   cargarListaDePreguntas() {
     // Me suscribo al observable del servicio de API Preguntas
     this.apiService.getPreguntas().subscribe((data: any) => {
@@ -108,6 +115,14 @@ export class PreguntadosComponent {
   }
 
 
+  // Función que hace un setInterval, y le paso una función que se repetirá cada segundo
+  iniciarContadorTiempo() {
+    this.intervaloTiempo = setInterval(() => {
+      this.duracionPartida++; // La función lo que hace es sumar en 1 la duración de la partida
+    }, 1000);
+  }
+
+
   // Función que se ejecuta cuando el usuario elige una de las opciones
   seleccionarRespuesta(opcion: string) {
     if (!this.yaRespondio) {
@@ -118,7 +133,6 @@ export class PreguntadosComponent {
       if (opcion === this.preguntaActual?.respuestaCorrecta) {
         this.mensaje = '¡Correcto!';
         document.getElementById('parrafoMensaje')?.classList.add('mensajeCorrecto');
-        // this.cantidadAciertos++;
 
       } else {
         this.mensaje = '¡Incorrecto!';
@@ -148,9 +162,17 @@ export class PreguntadosComponent {
   // Función que se ejecuta cuando termina el juego ya sea ganando o perdiendo
   finalizarJuego(gano: boolean) {
     this.botonJugarOtraVez = true;
+    // Muestro el botón 'Jugar otra vez'
+
+    clearInterval(this.intervaloTiempo);
+    console.log('La partida duró: ' + this.duracionPartida + ' segundos');
+    // Detengo el contador de tiempo
+
+    let tiempoExtra = this.duracionPartida * 10; // Por ejemplo, 10 puntos por segundo extra
+    let puntuacion = 3000 + (this.vidasRestantes * 1000) - tiempoExtra;
+    // Calculo la puntuación basado en la duración de la partida y las vidas restantes
 
     if (gano) {
-      let puntuacion = 100 + (this.vidasRestantes * 100);
       document.getElementById('parrafoMensaje')?.classList.add('mensajeCorrecto');
       this.mensaje = '¡¡GANASTE!! 🤩 Puntuación final: ' + puntuacion;
     } else {

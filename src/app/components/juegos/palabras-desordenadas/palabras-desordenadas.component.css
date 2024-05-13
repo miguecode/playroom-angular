@@ -1,0 +1,204 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+#atras {
+  background: #fff;
+  border: none;
+  border-radius: 15%;
+  width: 120px;
+  height: 100px;
+  padding: 10px;
+  transition: 0.25s;
+  color: #000;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 45%;
+}
+#atras:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.contenedor-juego {
+  background: url('../../../../assets/images/juegos/palabras-desordenadas/fondoMiJuego.jpg');
+  background-size: cover;
+  border: solid 10px black;
+  border-radius: 40px;
+  width: 130vh; /* El contenedor ocupa el 95% del ancho del body */
+  height: 80vh; /* El contenedor ocupa el 95% de la altura visible del viewport */
+  margin: 2.5% auto; /* Márgenes superior e inferior del 2.5% y automático a los lados para centrar */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; 
+  gap: 25px;
+}
+
+.botonJugar {
+  background: #000000d2;
+  border: none;
+  border-radius: 10px;
+  width: 250px;
+  height: 100px;
+  padding: 10px;
+  transition: 0.25s;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.botonJugar:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.header {
+  background-color: #00000097;
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  border-radius: 10px 10px 0px 0px;
+}
+.tituloHeader {
+  color: #fff;
+  border-radius: 20px;
+  font-weight: bold;
+  margin-left: 2%;
+}
+.tiempoRestante {
+  color: #fff;
+  font-weight: bold;
+  margin-right: 11%;
+  font-size: 40px;
+}
+
+.titulo {
+  color: rgba(255, 255, 255, 0.707);
+  font-size: 100px;
+  font-weight: bold;
+  margin-top: 15px;
+}
+.parrafo {
+  color: rgba(255, 255, 255, 0.707);
+  font-size: 26px;
+  font-weight: bold;
+  max-width: 80%;
+}
+
+.palabras {
+  /* background-color: #00000097; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 98%;
+  height: 540px;
+  border-radius: 10px;
+}
+
+.elemento {
+  background-color: #00000097;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 28%;
+  height: 500px;
+  max-height: max-content;
+  border-radius: 15px;
+}
+
+.pPalabra {
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+}
+
+input {
+  border: none;
+  border-bottom: solid 3px #fff;
+  background-color: transparent;
+  width: 95%;
+  text-align: center;
+  height: 80px;
+  font-size: 33px;
+  margin-top: 100px;
+  margin-bottom: 130px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  width: 95%;
+  height: 60px;
+  border-radius: 10px;
+}
+
+.botonSiguiente {
+  background: #000000d2;
+  border: none;
+  border-radius: 10px;
+  width: 250px;
+  height: 80px;
+  padding: 7px;
+  transition: 0.25s;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  margin-right: 3%;
+}
+.botonSiguiente:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.contenedor-final {
+  display: flex;
+  flex-direction: column;
+  width: 75%;
+  height: 98%;
+  align-items: center;
+  margin-top: 7px;
+  gap: 3px;
+}
+
+.tituloFinal {
+  color: #fff;
+  font-weight: bold;
+  font-size: 94px;
+}
+
+.parrafoFinal {
+  color: rgba(255, 255, 255, 0.707);
+  font-weight: bold;
+  max-width: 90%;
+  font-size: 34px;
+  text-align: center;
+}
+
+.elementoCorrecto {
+  background-color: #31663151;
+  border: solid 10px #499e49;
+}
+
+
+/* El nivel 6 no va a estar habilitado */
+/* .imagenNivelSeis { 
+  background: url('../../../../assets/images/juegos/palabras-desordenadas/fondoNivelSeis.jpg');
+  background-size: cover;
+} */

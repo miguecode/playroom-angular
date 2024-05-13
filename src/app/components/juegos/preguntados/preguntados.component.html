@@ -9,12 +9,12 @@
 
   <div class="contenedor-juego">
     @if (!juegoIniciado) {
-        <br><br><br>
-        <h1>Preguntados</h1>
-        <p>Bienvenido a Preguntados. El desafío es llegar a contestar 10 preguntas,
-          tenés 3 vidas. El tiempo influirá en la puntuación final.
-        </p>
-        <button class="botonJugar" (click)="jugar()">Jugar</button>
+      <br><br><br>
+      <h1>Preguntados</h1>
+      <p>Bienvenido a Preguntados. El desafío es llegar a contestar 10 preguntas,
+        tenés 3 vidas. El tiempo influirá en la puntuación final.
+      </p>
+      <button class="botonJugar" (click)="jugar()">Jugar</button>
     } @else {
       @if (cargando) {
         <br><br><br><br><br><br><br>

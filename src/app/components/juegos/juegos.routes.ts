@@ -13,4 +13,8 @@ export const routes: Routes = [
   path: 'preguntados',
  loadComponent: () => import('./preguntados/preguntados.component').then(m => m.PreguntadosComponent)
 },
+{
+  path: 'palabras-desordenadas',
+ loadComponent: () => import('./palabras-desordenadas/palabras-desordenadas.component').then(m => m.PalabrasDesordenadasComponent)
+},
 ];
