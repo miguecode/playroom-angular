@@ -9,14 +9,15 @@
 
   <div class="contenedor-juego" id="contenedor">
     @if(!juegoIniciado) {
-      <h1 class="titulo">Preguntas Desordenadas</h1>
-      <p class="parrafo">Bienvenido a Preguntas Desordenadas. El juego se trata de descifrar
+      <h1 class="titulo">Palabras Desordenadas</h1>
+      <p class="parrafo">Bienvenido a Palabras Desordenadas. El juego se trata de descifrar
         palabras. Cada nivel tiene 3 palabras y se va volviendo más difícil.
       </p>
       <button class="botonJugar" (click)="jugar()">Jugar</button>
     } @else {
       <div class="header">
         <h1 class="tituloHeader">Palabras Desordenadas</h1>
+        <h1 class="tituloHeader">Nivel {{ nivelActual }}/5</h1>
         <p class="tiempoRestante">{{ tiempoRestante }}</p>
       </div>
 
@@ -48,7 +49,8 @@
       } @else {
         <div class="contenedor-final">
           <h1 class="tituloFinal">{{ mensajeTitulo }}</h1>
-          <p class="parrafoFinal">{{ mensajeTexto }}</p> <br>
+          <p class="parrafoFinal">{{ mensajeTexto }}</p>
+          <p class="parrafoFinal">{{ mensajePuntuacion }}</p>
           <button class="botonJugar" (click)="jugarOtraVez()">Jugar otra vez</button>
         </div>
       }

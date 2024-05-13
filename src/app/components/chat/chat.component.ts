@@ -40,8 +40,8 @@ export class ChatComponent implements OnInit{
         this.scrollToBottom();
       }, 0);
 
-      console.log('Estoy en el componente CHAT y los mensajes recibidos son:');
-      console.log(this.mensajes);
+      // console.log('Estoy en el componente CHAT y los mensajes recibidos son:');
+      // console.log(this.mensajes);
     });
   }
   

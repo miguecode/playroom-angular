@@ -35,6 +35,7 @@ export class PalabrasDesordenadasComponent {
   juegoFinalizado: boolean = false;
   mensajeTitulo: string = '';
   mensajeTexto: string = '';
+  mensajePuntuacion: string = '';
   cantidadPartidasJugadas: number = 0;
 
 
@@ -216,11 +217,15 @@ export class PalabrasDesordenadasComponent {
     this.cantidadPartidasJugadas++;
     document.getElementById('contenedor')!.classList.remove('imagenNivelSeis');
 
+    let puntuacion = 5000;
+
     if (gano) {
       this.mensajeTitulo = '🔥 ¡Felicidades! 🔥';
-      this.mensajeTexto = '¡Superaste todos los niveles! Sos un maestro del ordenamiento de palabras. Puntuación final:';
+      this.mensajeTexto = '¡Superaste todos los niveles! Sos un maestro del ordenamiento de palabras.';
+      this.mensajePuntuacion = `Puntuación final: ${puntuacion}`;
     } else {
       this.mensajeTitulo = '😞 Muy lento 😞';
+      this.mensajePuntuacion = '';
       this.mensajeTexto = '¡Se te terminó el tiempo! Intentalo otra vez, pero ahora tenés que ser mas rápido.';
     }
   }
