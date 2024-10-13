@@ -1,3 +1,34 @@
+# 🎮 Playroom MG - Sitio Web
+
+Este proyecto es un sitio web desarrollado con Angular. Fue creado en 2024 y se trata de un sitio de videojuegos con sistema de Login y un chat grupal. Utiliza los servicios de Google Firebase.
+
+## 📘 Descripción
+
+Playroom MG es un sitio web hecho con Angular que utiliza distintos servicios de Google Firebase. Brinda un sistema de Login, distintos videojuegos simples pero divertidos y un chat grupal para todos los usuarios. Para poder acceder al Playroom es necesario iniciar sesión, o ingresar como invitado.
+
+## 🕹️ Juegos
+
+- ****: .
+- ****: .
+- ****: .
+- ****: .
+- ****: .
+
+
+-- --
+
+
+## 🚀 Cómo hacer funcionar la aplicación
+
+## 📌 Aclaraciones
+- Fue creado en 2024, mientras cursaba la carrera de Tecnicatura Universitaria en Programación, en la Universidad Tecnológica Nacional.
+- El proyecto está bajo la licencia MIT.
+
+## 🗃️ Otros proyectos similares
+- []()
+- []()
+
+
 # PlayroomAngular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
