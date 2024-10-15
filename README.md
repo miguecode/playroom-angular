@@ -2,23 +2,40 @@
 
 Este proyecto es un sitio web desarrollado con Angular. Fue creado en 2024 y se trata de un sitio de videojuegos con sistema de Login y un chat grupal. Utiliza los servicios de Google Firebase.
 
+**⭐ Link: [Playroom MG](https://sala-de-juegos-82d5a.web.app/)**
+
 ## 📘 Descripción
 
-Playroom MG es un sitio web hecho con Angular que utiliza distintos servicios de Google Firebase. Brinda un sistema de Login, distintos videojuegos simples pero divertidos y un chat grupal para todos los usuarios. Para poder acceder al Playroom es necesario iniciar sesión, o ingresar como invitado.
+Playroom MG es un sitio web hecho con Angular 17 que utiliza distintos servicios de Google Firebase. Brinda un sistema de Login, distintos videojuegos simples pero divertidos y un chat grupal para todos los usuarios. Para poder acceder al Playroom es necesario iniciar sesión, o ingresar como invitado.
 
 ## 🕹️ Juegos
 
-- ****: .
-- ****: .
-- ****: .
-- ****: .
-- ****: .
+- **Ahorcado**: El clásico juego de adivinar la palabra correcta.
+- **Mayor o Menor**: Se muestra una carta en pantalla, y tenés que acertar si la siguiente será mayor o menor.
+- **Preguntados**: Juego de preguntas, tenés 4 opciones y sólo una es correcta. Las preguntas se consumen desde una API externa.
+- **Palabras Desordenadas**: Son 5 niveles, y en cada uno tenés que descubrir las 3 palabras desordenadas para ganar.
 
+<p align="center">
+  <img src="" alt="Juego Ahorcado" width="200"/>
+  <img src="" alt="Mayor o Menor" width="200"/>
+  <img src="" alt="Preguntados" width="200"/>
+  <img src="" alt="Palabras Desordenadas" width="200"/>
+</p>
 
 -- --
 
+### 🖥️ Inicio
 
-## 🚀 Cómo hacer funcionar la aplicación
+  <img src="https://github.com/user-attachments/assets/2def7d98-c22f-4a52-bce0-cf1b26f77959" width="1200"/>
+
+### 
+
+<img src="" width="1200"/>
+<img src="" width="1200"/>
+<img src="" width="1200"/>
+
+
+## 🚀 
 
 ## 📌 Aclaraciones
 - Fue creado en 2024, mientras cursaba la carrera de Tecnicatura Universitaria en Programación, en la Universidad Tecnológica Nacional.
