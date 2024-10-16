@@ -16,10 +16,10 @@ Playroom MG es un sitio web hecho con Angular 17 que utiliza distintos servicios
 - **Palabras Desordenadas**: Son 5 niveles, y en cada uno tenés que descubrir las 3 palabras desordenadas para ganar.
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/5183bc6e-09d7-4887-8308-f00f7d2aadaf" alt="Juego Ahorcado" width="500"/>
-  <img src="https://github.com/user-attachments/assets/f750e4ee-57c1-43e0-afd8-007eb0eafd4e" alt="Mayor o Menor" width="500"/>
-  <img src="https://github.com/user-attachments/assets/7b1bf89f-622a-48d3-8fed-9c775c7ca74d" alt="Preguntados" width="500"/>
-  <img src="https://github.com/user-attachments/assets/cc80e7a1-6f97-485e-bf19-82dae23dc247" alt="Palabras Desordenadas" width="500"/>
+  <img src="https://github.com/user-attachments/assets/5183bc6e-09d7-4887-8308-f00f7d2aadaf" alt="Juego Ahorcado" width="450"/>
+  <img src="https://github.com/user-attachments/assets/f750e4ee-57c1-43e0-afd8-007eb0eafd4e" alt="Mayor o Menor" width="450"/>
+  <img src="https://github.com/user-attachments/assets/7b1bf89f-622a-48d3-8fed-9c775c7ca74d" alt="Preguntados" width="450"/>
+  <img src="https://github.com/user-attachments/assets/cc80e7a1-6f97-485e-bf19-82dae23dc247" alt="Palabras Desordenadas" width="450"/>
 </p>
 
 -- --
