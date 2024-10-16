@@ -15,12 +15,21 @@ Playroom MG es un sitio web hecho con Angular 17 que utiliza distintos servicios
 - **Preguntados**: Juego de preguntas, tenés 4 opciones y sólo una es correcta. Las preguntas se consumen desde una API externa.
 - **Palabras Desordenadas**: Son 5 niveles, y en cada uno tenés que descubrir las 3 palabras desordenadas para ganar.
 
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/5183bc6e-09d7-4887-8308-f00f7d2aadaf" alt="Juego Ahorcado" width="450"/>
-  <img src="https://github.com/user-attachments/assets/f750e4ee-57c1-43e0-afd8-007eb0eafd4e" alt="Mayor o Menor" width="450"/>
-  <img src="https://github.com/user-attachments/assets/7b1bf89f-622a-48d3-8fed-9c775c7ca74d" alt="Preguntados" width="450"/>
-  <img src="https://github.com/user-attachments/assets/cc80e7a1-6f97-485e-bf19-82dae23dc247" alt="Palabras Desordenadas" width="450"/>
-</p>
+### Ahorcado
+
+  <img src="https://github.com/user-attachments/assets/5183bc6e-09d7-4887-8308-f00f7d2aadaf" alt="Juego Ahorcado" width="700"/>
+
+### Mayor o Menor
+  
+  <img src="https://github.com/user-attachments/assets/f750e4ee-57c1-43e0-afd8-007eb0eafd4e" alt="Mayor o Menor" width="700"/>
+
+### Preguntados
+  
+  <img src="https://github.com/user-attachments/assets/7b1bf89f-622a-48d3-8fed-9c775c7ca74d" alt="Preguntados" width="700"/>
+
+### Palabras Desordenadas
+  
+  <img src="https://github.com/user-attachments/assets/cc80e7a1-6f97-485e-bf19-82dae23dc247" alt="Palabras Desordenadas" width="700"/>
 
 -- --
 
@@ -33,8 +42,8 @@ Playroom MG es un sitio web hecho con Angular 17 que utiliza distintos servicios
 ## 🏠 Home
 
   Así se ve la pantalla principal cuando un usuario inicia sesión. Se destacan los juegos y el chat grupal.
-  
-## 🚀 
+
+  <img src="https://github.com/user-attachments/assets/9ab1fcd7-0028-481b-9ab2-ff5c69b3ef27" width="1200"/>
 
 ## 📌 Aclaraciones
 - Fue creado en 2024, mientras cursaba la carrera de Tecnicatura Universitaria en Programación, en la Universidad Tecnológica Nacional.
