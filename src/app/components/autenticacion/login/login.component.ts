@@ -71,8 +71,9 @@ export class LoginComponent {
     this.usuarioCreado.clave = '';
   }
 
-  autocompletarDatos(correo: string, clave: string) {
-    this.usuarioCreado.correo = correo;
-    this.usuarioCreado.clave = clave;
+  autocompletarDatos() {
+    this.usuarioCreado.correo = 'invitado@gmail.com';
+    this.usuarioCreado.clave = '111111';
+    this.ingresar();
   }
 }

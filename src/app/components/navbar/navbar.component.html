@@ -1,8 +1,8 @@
 <header class="header">
   @if (!isLoggedIn) {
-    <a href="/bienvenida" class="logo">Sala de Juegos</a>
+    <a href="/bienvenida" class="logo">🎮 Playroom MG</a>
   } @else {
-    <a href="/home" class="logo">Sala de Juegos</a>
+    <a href="/home" class="logo">🎮 Playroom MG</a>
   }
 
   <nav class="navbar">
@@ -11,7 +11,7 @@
       <a routerLink="/autenticacion/registro">Crear cuenta</a>
     } @else {
       <!-- <a>Logeado: {{isLoggedIn}}</a> -->
-      <a> {{this.usuarioActual?.nombreUsuario}} - {{this.usuarioActual?.sexo}}</a>
+      <a>🧑 {{this.usuarioActual?.nombreUsuario}}</a>
       <a (click)="cerrarSesion()" routerLink="/bienvenida">Cerrar Sesión</a>
     }
     <a routerLink="/quien-soy">Sobre mí</a>

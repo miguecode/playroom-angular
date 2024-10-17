@@ -1,7 +1,7 @@
 .contenedor-chat {
   background-color: rgba(0, 0, 0, 0.747);
   color: #fff;
-  border: solid 5px rgb(0, 0, 0);
+  /* border: solid 5px rgb(0, 0, 0); */
   border-radius: 10px;
   width: 700px;
   height: 400px; 
