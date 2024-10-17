@@ -12,7 +12,7 @@ Playroom MG es un sitio web hecho con Angular 17 que utiliza distintos servicios
 
 - ### 💀 El Ahorcado
 
-  El clásico juego de adivinar la palabra secreta. La puntuación se calcula por la cantidad de fallos y la longitud de la palabra.
+  El clásico juego de adivinar la palabra secreta, con límite de intentos antes de ser ahorcado.
 
   <img src="https://github.com/user-attachments/assets/5183bc6e-09d7-4887-8308-f00f7d2aadaf" alt="Juego Ahorcado" width="800"/>
 
@@ -47,9 +47,14 @@ Playroom MG es un sitio web hecho con Angular 17 que utiliza distintos servicios
 
   <img src="https://github.com/user-attachments/assets/9ab1fcd7-0028-481b-9ab2-ff5c69b3ef27" width="1200"/>
 
+## ⚙️ Detalles técnicos
+
+
+
+
 ## 📌 Aclaraciones
 - Fue creado en 2024, mientras cursaba la carrera de Tecnicatura Universitaria en Programación, en la Universidad Tecnológica Nacional.
-- La página podría llegar a actualizarse en el futuro, aunque no es uno de mis proyectos principales.
+- La página podría llegar a actualizarse en un futuro, aunque no es uno de mis proyectos principales.
 - El proyecto está bajo la licencia MIT.
 
 ## 🗃️ Otros proyectos similares
