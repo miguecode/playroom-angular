@@ -47,44 +47,22 @@ Playroom MG es un sitio web hecho con Angular 17 que utiliza distintos servicios
 
   <img src="https://github.com/user-attachments/assets/9ab1fcd7-0028-481b-9ab2-ff5c69b3ef27" width="1200"/>
 
-## ⚙️ Detalles técnicos
+## 📋 Detalles técnicos
 
+- 🔧 Framework y Lenguajes
 
+  - 🅰️ Angular 17 (Typescript, HTML, CSS)
+  - 🎨 Bootstrap
+  - 🖌️ Estilos tomados de otras librerías (para botones, componentes, fuentes, etc.).
 
+- 🔐 Servicios
+
+  - 🔑 Firebase Authentication
+  - 🗄️ Firebase  Firestore
+  - 🌐 Firebase Hosting
+  - ❓ API Externa para el juego de preguntas: [Open Trivia DB](https://opentdb.com/)
 
 ## 📌 Aclaraciones
-- Fue creado en 2024, mientras cursaba la carrera de Tecnicatura Universitaria en Programación, en la Universidad Tecnológica Nacional.
+- Fue creado en 2024, mientras cursaba la Tecnicatura Universitaria en Programación, en la UTN.
 - La página podría llegar a actualizarse en un futuro, aunque no es uno de mis proyectos principales.
 - El proyecto está bajo la licencia MIT.
-
-## 🗃️ Otros proyectos similares
-- []()
-- []()
-
-# PlayroomAngular
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
-
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
