@@ -1,0 +1,31 @@
+  @if (!isLoggedIn) {
+    <!-- <div class="texto">
+      <h1>Mmm...</h1>
+      <h2>¿Qué haces acá? 🤔​​</h2> <br>
+      <p>Lo sentimos, si querés acceder a la Sala de Juegos, primero tenes <br>
+        que iniciar sesión con tu usuario o en su defecto, registrarte.</p>
+      <div class="botones">
+        <button routerLink='/bienvenida'>Volver a Inicio</button>
+      </div> 
+    </div> -->
+  } @else {
+    <div class="contenedor">
+      <div class="contenedor-juegos">
+        <div id="linea">
+          <h5>Juegos</h5>
+        </div>
+        <div id="linea">
+          <button class="botonJuego" routerLink='/juegos/ahorcado'>Ahorcado</button>
+          <button class="botonJuego" routerLink="/juegos/mayor-menor">Mayor o Menor</button>
+        </div>
+        <div id="linea">
+          <button class="botonJuego" routerLink="/juegos/preguntados">Preguntados</button>
+          <button class="botonJuego" routerLink="/juegos/palabras-desordenadas">Palabras Desordenadas</button>
+        </div>
+      </div>
+      <div class="contenedor-chat">
+        <app-chat></app-chat>
+      </div>
+    </div>
+    <!-- <button class="botonGrande">ESTADÍSTICAS</button> -->
+  }

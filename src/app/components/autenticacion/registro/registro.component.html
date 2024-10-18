@@ -1,0 +1,35 @@
+<br><br><br><br>
+<div class="wrapper">
+    <h1 style="user-select: none;">Crear Cuenta</h1>
+    <div class="input-box">
+      <input type="email" [(ngModel)]="usuarioCreado.correo" placeholder="Correo" ngModel email required>
+      <i class='bx bxs-envelope'></i>
+    </div>
+    <div class="input-box">
+      <input type="password" [(ngModel)]="usuarioCreado.clave" placeholder="Contraseña" required>
+      <i class='bx bxs-lock-alt'></i>
+    </div>
+    <div class="input-box">
+      <input type="text" [(ngModel)]="usuarioCreado.nombreUsuario" placeholder="Nombre de Usuario" required>
+      <i class='bx bxs-user' style='color:#fff' ></i>
+    </div>
+    <div class="input-box">
+      <input type="number" [(ngModel)]="usuarioCreado.edad" placeholder="Edad" min="5" max="120" required>
+      <i class='bx bxs-calendar'></i>
+    </div>
+    <div class="input-box">
+      <select [(ngModel)]="usuarioCreado.sexo" required id="sexo">
+        <option value="masculino">Masculino</option>
+        <option value="femenino">Femenino</option>
+        <option value="sin-especificar" >Sin Especificar</option>
+      </select>
+      <i class='bx bx-male-female' style='color:#ffffff' ></i>
+    </div>
+
+    <button (click)="registrar()" class="btn">Registrar</button>
+    <p class="mensaje" [ngClass]="{'error': error}" id="mensaje"> {{mensaje}} </p>
+
+    <div class="register-link">
+      <p>¿Ya estás registrado? <a routerLink="/autenticacion/login">Iniciá sesión</a></p>
+    </div>
+</div>

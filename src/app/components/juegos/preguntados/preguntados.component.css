@@ -1,0 +1,207 @@
+* {
+  box-sizing: border-box;
+  font-family: "Poppins", 'Segoe UI Emoji', 'Noto Color Emoji', 'Twemoji', sans-serif;
+}
+
+.contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 25px;
+}
+
+#atras {
+  background: #fff;
+  border: none;
+  border-radius: 15%;
+  width: 120px;
+  height: 100px;
+  padding: 10px;
+  transition: 0.25s;
+  color: #000;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 45%;
+}
+#atras:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.contenedor-juego {
+  background: url('../../../../assets/images/juegos/preguntados/fondo.jpg');
+  background-size: cover;
+  border: solid 10px black;
+  border-radius: 40px;
+  width: 130vh; /* El contenedor ocupa el 95% del ancho del body */
+  height: 80vh; /* El contenedor ocupa el 95% de la altura visible del viewport */
+  margin: 2.5% auto; /* Márgenes superior e inferior del 2.5% y automático a los lados para centrar */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: flex-end; */
+  align-items: center; 
+}
+
+h1 {
+  color: rgba(0, 0, 0, 0.707);
+  font-size: 100px;
+  font-weight: bold;
+}
+p {
+  color: rgba(0, 0, 0, 0.707);
+  font-size: 26px;
+  font-weight: bold;
+  max-width: 60%;
+}
+
+.contenedor-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 45px;
+}
+
+.parrafoPregunta {
+  color: rgba(0, 0, 0, 0.707);
+  font-size: 36px;
+  font-weight: bold;
+  max-width: 60%;
+}
+
+.botonJugar {
+  background: #000000d2;
+  border: none;
+  border-radius: 10px;
+  width: 250px;
+  height: 100px;
+  padding: 10px;
+  transition: 0.25s;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.botonJugar:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.botonOpcion {
+  background: #0000009a;
+  border: none;
+  border-radius: 10px;
+  width: 550px;
+  max-width: 1200px;
+  height: 60px;
+  min-height: 60px;
+  max-height: max-content;
+  padding: 10px;
+  transition: 0.25s;
+  color: #fff;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.botonOpcion:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.botonSiguiente {
+  background: #000000d2;
+  border: none;
+  border-radius: 10px;
+  width: 150px;
+  height: 75px;
+  padding: 7px;
+  transition: 0.25s;
+  color: #fff;
+  font-size: 25px;
+  font-weight: bold;
+  margin-bottom: 7px;
+}
+.botonSiguiente:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.mensajeCorrecto {
+  color: #39ae1e;
+  font-size: 29px;
+  font-weight: bold;
+  background-color: #00000096;
+  padding: 6px;
+  border-radius: 10px;
+  width: 680px;
+}
+.mensajeIncorrecto {
+  color: #a72727;
+  font-size: 29px;
+  font-weight: bold;
+  background-color: #00000096;
+  padding: 6px;
+  border-radius: 10px;
+  width: 680px;
+}
+.opcionCorrecta {
+  background-color: #39ae1e;
+  color: #ffffff;
+  cursor: auto;
+}
+.opcionCorrecta:hover {
+  background-color: #2d8a19;
+}
+.opcionIncorrecta {
+  background-color: #a72727;
+  color: #ffffff;
+  cursor: auto;
+}
+.opcionIncorrecta:hover {
+  background-color: #7b1d1d;
+}
+
+
+
+
+
+
+/* Código del LOADER hecho en CSS */
+.lds-ring,
+.lds-ring div {
+  box-sizing: border-box;
+}
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid currentColor;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: currentColor transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,88 @@
+h1 {
+  font-size: 110px;
+}
+h2 {
+  font-size: 55px;
+}
+p {
+  font-size: 22px;
+}
+
+.contenedor {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 5%;
+  gap: 8%;
+  margin-left: 10%;  
+}
+
+.contenedor-juegos {
+  background-color: rgba(0, 0, 0, 0.747);
+  /* border: solid 5px rgb(0, 0, 0); */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 40%;
+  gap: 20px;
+  border-radius: 10px;
+  padding-bottom: 30px;
+}
+
+#linea {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.botonJuego {
+  cursor: pointer;
+  background: #fff;
+  border: 2px solid black;
+  color: #1a2544;
+  border-radius: 7px;
+  /* padding: 50px; */
+  font-size: 35px;
+  font-weight: bold;
+  transition: 0.15s;
+  width: 250px;
+  height: 150px;
+}
+
+.botonGrande {
+  cursor: pointer;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .4);
+  backdrop-filter: blur(40px);
+  box-shadow: 10px  rgba(0, 0, 0, .2);
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  font-size: 40px;
+  transition: 0.15s;
+  /* width: 780px; */
+  margin-top: 5%;
+}
+
+button:hover {
+  border: none;
+  background-color:#1a2544;
+  color: #fff;
+  transform: scale(1.11);
+}
+
+.contenedor-chat {
+  width: 50%;
+  max-width: 50%;
+}
+
+h5 {
+  font-size: 60px;
+  color: #fff;
+  padding: 0px;
+  margin: 0px;
+}

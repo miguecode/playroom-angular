@@ -1,0 +1,59 @@
+<br>
+<br>
+<br>
+
+<div class="contenedor">
+  <button routerLink='/home' id="atras">
+    Volver
+  </button>
+
+  <div class="contenedor-juego" id="contenedor">
+    @if(!juegoIniciado) {
+      <h1 class="titulo">Palabras Desordenadas</h1>
+      <p class="parrafo">Bienvenido a Palabras Desordenadas. El juego se trata de descifrar
+        palabras. Cada nivel tiene 3 palabras y se va volviendo más difícil.
+      </p>
+      <button class="botonJugar" (click)="jugar()">Jugar</button>
+    } @else {
+      <div class="header">
+        <h1 class="tituloHeader">Palabras Desordenadas</h1>
+        <h1 class="tituloHeader">Nivel {{ nivelActual }}/5</h1>
+        <p class="tiempoRestante">{{ tiempoRestante }}</p>
+      </div>
+
+      @if(!juegoFinalizado) {
+        <div class="palabras">
+          <div class="elemento" id="elementoUno">
+            <p class="pPalabra">{{ primerPalabraDesordenada }}</p>
+            <input type="text" placeholder="Escribir palabra" [(ngModel)]="respuestaPrimerPalabra" id="inputPrimerPalabra"
+            (input)="verificarRespuesta('primerPalabra')" (input)="convertirAMayusculas($event)" autocomplete="off">
+          </div>
+          <div class="elemento" id="elementoDos">
+            <p class="pPalabra">{{ segundaPalabraDesordenada }}</p>
+            <input type="text" placeholder="Escribir palabra" [(ngModel)]="respuestaSegundaPalabra" id="inputSegundaPalabra"
+            (input)="verificarRespuesta('segundaPalabra')" (input)="convertirAMayusculas($event)" autocomplete="off">
+          </div>
+          <div class="elemento" id="elementoTres">
+            <p class="pPalabra">{{ tercerPalabraDesordenada }}</p>
+            <input type="text" placeholder="Escribir palabra" [(ngModel)]="respuestaTercerPalabra" id="inputTercerPalabra"
+            (input)="verificarRespuesta('tercerPalabra')" (input)="convertirAMayusculas($event)" autocomplete="off">
+          </div>
+          
+        </div>
+    
+        @if (nivelActualCompletado) {
+          <div class="footer">
+            <button class="botonSiguiente" (click)="siguienteNivel()">Siguiente Nivel</button>
+          </div>
+        }
+      } @else {
+        <div class="contenedor-final">
+          <h1 class="tituloFinal">{{ mensajeTitulo }}</h1>
+          <p class="parrafoFinal">{{ mensajeTexto }}</p>
+          <p class="parrafoFinal">{{ mensajePuntuacion }}</p>
+          <button class="botonJugar" (click)="jugarOtraVez()">Jugar otra vez</button>
+        </div>
+      }
+    }
+  </div>
+</div>

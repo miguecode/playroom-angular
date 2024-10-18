@@ -1,0 +1,31 @@
+<br>
+<br>
+<br>
+
+<div class="contenedor">
+  <button routerLink='/home' id="atras">
+    Volver
+  </button>
+
+  <div class="contenedor-juego">
+    <div class="contenedor-header">
+      <p id="puntuacion">Puntuación: {{this.puntuacion}}</p>
+    </div>
+    <div class="contenedor-arriba">
+      <div id="img-mazo" class="contenedor-imagen">
+        <img src="../../../../assets/images/juegos/mayor-menor/cartas/carta-atras2.png">
+      </div>
+      <div id="img-carta-actual" class="contenedor-imagen">
+        <img id="imagen" src="../../../../assets/images/juegos/mayor-menor/cartas/carta1.png">
+      </div>
+    </div>
+    <div class="contenedor-mensaje">
+      <p id="mensaje">{{this.mensaje}}</p>
+    </div>
+    <div class="opciones">
+      <button class="boton-opcion" id="boton-mayor">Mayor</button>
+      <button class="boton-opcion" id="boton-menor">Menor</button>
+      <button class="boton-opcion" id="boton-reiniciar" style="display: none;">Volver a Jugar</button>
+    </div>
+  </div>
+</div>
