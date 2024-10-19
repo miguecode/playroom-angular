@@ -39,8 +39,9 @@ p {
 
 button {
   margin-top: 20px;
-  width: 40%;
-  height: 60px;
+  /* width: 40%; */
+  /* height: 60px; */
+  padding: 20px 40px;
   background: #fff;
   border: none;
   outline: none;
