@@ -58,7 +58,7 @@ Playroom MG es un sitio web hecho con Angular 17 que utiliza distintos servicios
 - 🔐 Servicios
 
   - 🔑 Firebase Authentication
-  - 🗄️ Firebase  Firestore
+  - 🗄️ Firebase Firestore
   - 🌐 Firebase Hosting
   - ❓ API Externa para el juego de preguntas: [Open Trivia DB](https://opentdb.com/)
 
