@@ -1,6 +1,6 @@
 # 🎮 Playroom MG - Sitio Web
 
-Este proyecto es un sitio web desarrollado con Angular. Fue creado en 2024 y se trata de un sitio de videojuegos con sistema de Login y un chat grupal. Utiliza los servicios de Google Firebase.
+Este proyecto es un sitio web desarrollado con Angular. Se trata de un sitio de videojuegos con sistema de Login y un chat grupal. Utiliza los servicios de Google Firebase.
 
 **⭐ Link: [Playroom MG](https://sala-de-juegos-82d5a.web.app/)**
 
@@ -63,8 +63,6 @@ Playroom MG es un sitio web hecho con Angular 17 que utiliza distintos servicios
   - ❓ API Externa para el juego de preguntas: [Open Trivia DB](https://opentdb.com/)
 
 ## 📌 Aclaraciones
-- Fue creado en 2024, mientras cursaba la Tecnicatura Universitaria en Programación, en la UTN.
-- La página podría llegar a actualizarse en un futuro, aunque no es uno de mis proyectos principales.
 - El proyecto está bajo la licencia MIT.
 
 ## 🗃️ Otros proyectos similares
