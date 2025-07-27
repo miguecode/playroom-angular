@@ -63,6 +63,7 @@ Playroom MG es un sitio web hecho con Angular 17 que utiliza distintos servicios
   - ❓ API Externa para el juego de preguntas: [Open Trivia DB](https://opentdb.com/)
 
 ## 📌 Aclaraciones
+
 - El proyecto está bajo la licencia MIT.
 
 ## 🗃️ Otros proyectos similares
