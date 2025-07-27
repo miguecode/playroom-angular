@@ -66,4 +66,4 @@ Playroom MG es un sitio web hecho con Angular 17 que utiliza distintos servicios
 - El proyecto está bajo la licencia MIT.
 
 ## 🗃️ Otros proyectos similares
-- [Clínica Online](https://github.com/Leumig/clinica-online-angular)
+- [Clínica Online](https://github.com/miguecode/clinica-online-angular)
